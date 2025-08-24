@@ -287,7 +287,7 @@ else:
             st.caption("Tip: Aim to keep the line at or above your target.")
 
     with right:
-        # st.metric("Current Streak (days)", habit_obj.get_streak())
+        st.metric("Current Streak (days)", habit_obj.get_streak())
         recent = logs.copy()
         rec = habit_obj.recommendation(recent)
         st.markdown("### 🔍 Personalized Recommendation")
@@ -297,6 +297,7 @@ else:
 st.markdown("---")
 st.caption("Created by Zayan Ahmad Ghous for a university subject on OOP.")
 st.caption("OOP pillars: abstract base class (`Habit`), subclasses (`Exercise/Study/Sleep`), encapsulated state (`__streak_days`), polymorphic `recommendation()`; scalable via `HabitFactory` + repository pattern.")
+
 
 
 
