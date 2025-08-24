@@ -21,30 +21,32 @@ class Habit(ABC):
     @property
     def target(self) -> float:
         return self._target_per_day
-
-    def _update_streak(self, logs_df: pd.DataFrame):
-        """Update streak based on consecutive days meeting target."""
+        def _update_streak(self, logs_df: pd.DataFrame):
         if logs_df.empty:
             self.__streak_days = 0
             return
-        # Create a date -> met_target map
+
         logs_df = logs_df.copy()
         logs_df["date"] = pd.to_datetime(logs_df["date"]).dt.date
+
+        # Create map of date -> True/False (met target or not)
         met = logs_df.groupby("date")["amount"].sum().apply(lambda x: x >= self.target)
-        # Count consecutive days up to today where met is True
-        today = dt.date.today()
+
+        # Start streak from the last date in logs
+        last_day = max(met.index)   # most recent logged date
         streak = 0
-        d = today
+        d = last_day
+
+        # Walk backwards in time until you find a break
         while d in met.index and met.loc[d]:
             streak += 1
             d = d - dt.timedelta(days=1)
-        # If today not met, see if yesterday starts the streak
-        if streak == 0:
-            d = today - dt.timedelta(days=1)
-            while d in met.index and met.loc[d]:
-                streak += 1
-                d = d - dt.timedelta(days=1)
+
         self.__streak_days = streak
+
+
+    def get_streak(self) -> int:
+        return self.__streak_days
 
     def get_streak(self) -> int:
         return self.__streak_days
@@ -294,6 +296,7 @@ else:
 st.markdown("---")
 st.caption("Created by Zayan Ahmad Ghous for a university subject on OOP.")
 st.caption("OOP pillars: abstract base class (`Habit`), subclasses (`Exercise/Study/Sleep`), encapsulated state (`__streak_days`), polymorphic `recommendation()`; scalable via `HabitFactory` + repository pattern.")
+
 
 
 
