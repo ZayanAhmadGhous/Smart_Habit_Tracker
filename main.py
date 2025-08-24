@@ -5,7 +5,6 @@ import pandas as pd
 import datetime as dt
 from abc import ABC, abstractmethod
 from typing import List, Dict, Optional, Tuple, Any
-st.subheader("Created By Zayan Ahmad Ghous")
 # -------------------------
 # OOP: Abstraction + Encapsulation
 # -------------------------
@@ -293,6 +292,8 @@ else:
 
 # Footer
 st.markdown("---")
+st.caption("Created by Zayan Ahmad Ghous for a university subject on OOP.")
 st.caption("OOP pillars: abstract base class (`Habit`), subclasses (`Exercise/Study/Sleep`), encapsulated state (`__streak_days`), polymorphic `recommendation()`; scalable via `HabitFactory` + repository pattern.")
+
 
 
