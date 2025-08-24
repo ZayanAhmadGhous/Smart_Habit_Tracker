@@ -21,7 +21,8 @@ class Habit(ABC):
     @property
     def target(self) -> float:
         return self._target_per_day
-        def _update_streak(self, logs_df: pd.DataFrame):
+        
+    def _update_streak(self, logs_df: pd.DataFrame):
         if logs_df.empty:
             self.__streak_days = 0
             return
@@ -296,6 +297,7 @@ else:
 st.markdown("---")
 st.caption("Created by Zayan Ahmad Ghous for a university subject on OOP.")
 st.caption("OOP pillars: abstract base class (`Habit`), subclasses (`Exercise/Study/Sleep`), encapsulated state (`__streak_days`), polymorphic `recommendation()`; scalable via `HabitFactory` + repository pattern.")
+
 
 
 
