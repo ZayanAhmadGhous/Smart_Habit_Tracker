@@ -61,7 +61,7 @@ The goal of this project is to promote productivity, consistency, and better dai
 
 ```bash id="c1x9kd"
 git clone https://github.com/ZayanAhmadGhous/Smart_Habit_Tracker.git
-cd smart-habit-tracker
+cd Smart_Habit_Tracker
 ```
 
 ### Install Dependencies
