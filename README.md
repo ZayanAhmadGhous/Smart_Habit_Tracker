@@ -1,81 +1,107 @@
-📌 Smart Habit Tracker (OOP + Streamlit)
-🚀 Overview
+# 📊 Smart Habit Tracker App
 
-The Smart Habit Tracker is an interactive application built with Object-Oriented Programming (OOP) principles and Streamlit for visualization.
-It allows users to track habits, visualize progress, and receive tailored habit recommendations.
+A simple and efficient habit tracking web application built using **Python** and **Streamlit**, designed with **Object-Oriented Programming (OOP)** principles. This app helps users build and maintain productive habits by tracking their daily activities.
 
-The project demonstrates all four pillars of OOP:
+---
 
-Encapsulation: Habit details (private attributes & methods).
+## 🚀 Project Overview
 
-Abstraction: Abstract Habit class with core methods.
+The Smart Habit Tracker allows users to:
 
-Inheritance: Specialized habit classes (ExerciseHabit, StudyHabit, SleepHabit).
+* Add and manage daily habits
+* Define habit type and time
+* Track consistency and build discipline
 
-Polymorphism: Different implementations of recommendation() for each habit type.
+The goal of this project is to promote productivity, consistency, and better daily routines.
 
-🛠️ Features
+---
 
-Add and log daily habits.
+## 🛠️ Tech Stack
 
-Track progress with visual graphs.
+* Python
+* Streamlit (for web interface)
+* Object-Oriented Programming (OOP)
+* Datetime (for handling time-based habits)
 
-Receive personalized recommendations based on habit type.
+---
 
-Streamlit-powered interactive dashboard.
+## ✨ Features
 
-Extendable with future features (gamification, leaderboards).
+* ➕ Add new habits with name, type, and time
+* 🗂️ Organized structure using OOP concepts
+* ⏰ Time-based habit tracking
+* 💻 Simple and interactive UI with Streamlit
+* ⚡ Lightweight and fast
 
-🏗️ Tech Stack
+---
 
-Python 3.10+
+## 📂 How It Works
 
-Streamlit (for GUI)
+* Users input:
 
-Matplotlib / Plotly (for charts)
+  * Habit Name
+  * Habit Type (e.g., Health, Study, Personal)
+  * Time
 
-SQLite (Optional) for persistent habit storage
+* The app stores and manages habits using OOP-based classes
 
-📂 Project Structure
-📦 SmartHabitTracker
-├── habit_tracker.py            
-└── README.md             
+* Displays habits in a structured and readable format
 
-▶️ How to Run
+---
 
-Clone the repository:
+## 🌐 Live Demo
 
-git clone https://github.com/your-username/smart-habit-tracker.git
+👉 **Live App:** ([Link to App](https://smarthabittracker.streamlit.app/))
+
+---
+
+## ⚙️ Installation & Setup
+
+### Clone Repository
+
+```bash id="c1x9kd"
+git clone https://github.com/ZayanAhmadGhous/Smart_Habit_Tracker.git
 cd smart-habit-tracker
+```
 
+### Install Dependencies
 
-Install dependencies:
-
+```bash id="p7k2lm"
 pip install -r requirements.txt
+```
+
+### Run the App
+
+```bash id="n4v8qs"
+streamlit run app.py
+```
+
+---
 
 
-Run Streamlit:
+## 📌 Future Improvements
 
-streamlit run habit_tracker.py
+* Add habit completion tracking (done/not done)
+* Weekly and monthly analytics
+* User authentication system
+* Notifications and reminders
 
-📊 Example Habits
+---
 
-ExerciseHabit → Tracks duration and suggests improvements.
+## ⚠️ Disclaimer
 
-StudyHabit → Tracks study hours and recommends Pomodoro technique.
+This project is built for educational and productivity purposes.
 
-SleepHabit → Tracks sleep hours and suggests consistency improvements.
+---
 
-🌱 Future Extensions
+## 🤝 Contributing
 
-Add gamification (badges, levels, streaks).
+Pull requests are welcome. Feel free to fork the repository and improve the project.
 
-Add AI-powered predictions (predict skipped habits).
+---
 
-Add community leaderboard for competition.
+## 📬 Contact
 
-Mobile app version with voice logging.
-
-🤝 Contribution
-
-Feel free to fork, improve, and submit pull requests. 🚀
+Zayan Ahmad Ghous
+Email: [zayanahmad.ghous@gmail.com](mailto:zayanahmad.ghous@gmail.com)
+LinkedIn: [LinkedIn](https://www.linkedin.com/in/zayan-ahmad-23863625b/)
